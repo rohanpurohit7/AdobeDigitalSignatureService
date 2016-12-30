@@ -100,7 +100,7 @@ public class signDigitalSignature {{
             try
             {
                 //Set connection properties required to invoke LiveCycle ES
-                System.out.println("***Now Entered Connection Props of InvokeAssembler Implementation***");
+                System.out.println("***Now Entered Connection Props of Digital Signer Implementation***");
                 Properties connectionProps = new Properties();
                 //Digital Signature AdobeLivecycle Connection Parameters Initialization
                 String defaultAdobeURL = null;
