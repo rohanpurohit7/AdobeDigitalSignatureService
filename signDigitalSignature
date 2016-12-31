@@ -114,9 +114,9 @@ public class signDigitalSignature {{
 
                 defaultAdobeURL = System.getProperty("com.ibm.pdfutil.AdobeLiveCycleURL");
                 System.out.println("The current Adobe LiveCycle Instance is >" +defaultAdobeURL);
-                defaultAdobeUserID = System.getProperty("com.ibm.pdfutil.AdobeLiveCycleUserName");
+                defaultAdobeUserID = System.getProperty("com.rohan.AdobeLiveCycleUserName");
                 System.out.println("The current Adobe LiveCycle Instance UserName is >" + defaultAdobeUserID);
-                defaultAdobePasskey = System.getProperty("com.ibm.pdfutil.AdobeLiveCyclePassword");
+                defaultAdobePasskey = System.getProperty("com.rohan.AdobeLiveCyclePassword");
                 System.out.println("The current Adobe LiveCycle Instance Password is >" +defaultAdobePasskey);
 
                 connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, defaultAdobeURL);//defaultAdobeURLSIT //http://153.40.33.114:22511
@@ -132,7 +132,7 @@ public class signDigitalSignature {{
                 SignatureServiceClient signClient = new SignatureServiceClient(myFactory);
 
                 //Specify a PDF document to which a signature field is added
-                //FileInputStream fileInputStream = new FileInputStream("C:\\RedGreyWaterMarkedDocumentFileName.pdf");
+                //FileInputStream fileInputStream = new FileInputStream("C:\\pdfFilewithaSignatureLine.pdf");
                 Document unsignedPDF = new Document (bais);
 
                 //Specify the name of the signature field
@@ -154,7 +154,7 @@ public class signDigitalSignature {{
                         null);
 
                 //Specify the credential Alias
-                hsmAlias = System.getProperty("com.rohan.pdfutil.HSMAlias");//"Hardware Security Module(HSM) Name"
+                hsmAlias = System.getProperty("com.rohan.HSMAlias");//"Hardware Security Module(HSM) Name"
                 String yourHSMAlias = hsmAlias;
                 System.out.println("The Alias for the HSM in use is >"+hsmAlias);
 
@@ -162,17 +162,17 @@ public class signDigitalSignature {{
                 Credential myCred = Credential.getInstance(yourHSMAlias); //HSM Name
 
                 //Specify the reason to sign the document
-                digSigReason= System.getProperty("com.rohan.pdfutil.DigitalSignatureReason");//"This PDF is digitally signed and verified for Rohan Purohit.";
+                digSigReason= System.getProperty("com.rohan.DigitalSignatureReason");//"This PDF is digitally signed and verified for Rohan Purohit.";
                 String reason = digSigReason;//"This PDF is digitally signed and verified for Rohan Purohit.";
                 System.out.println("The reason for this signature is >" +digSigReason);
 
                 //Specify the location of the signer
-                digSigLocation= System.getProperty("com.rohan.pdfutil.DigitalSignatureLocation");//" USA";
+                digSigLocation= System.getProperty("com.rohan.DigitalSignatureLocation");//" USA";
                 String location  = digSigLocation;//"USA.";
                 System.out.println("The location of the signing party is >" +digSigLocation);
 
                 //Specify contact information
-                digSigContactInfo= System.getProperty("com.rohan.pdfutil.DigitalSignatureContactInfo");//"Rohan Purohits Team";
+                digSigContactInfo= System.getProperty("com.rohan.DigitalSignatureContactInfo");//"Rohan Purohits Team";
                 String contactInfo = digSigContactInfo;//"Rohan Purohits Team.";
                 System.out.println("The contactInfo of the signer is >" +digSigContactInfo);
 
