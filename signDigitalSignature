@@ -112,7 +112,7 @@ public class signDigitalSignature {{
                 String digSigContactInfo = null;
                 String hsmAlias = null;
 
-                defaultAdobeURL = System.getProperty("com.ibm.pdfutil.AdobeLiveCycleURL");
+                defaultAdobeURL = System.getProperty("com.rohan.AdobeLiveCycleURL");
                 System.out.println("The current Adobe LiveCycle Instance is >" +defaultAdobeURL);
                 defaultAdobeUserID = System.getProperty("com.rohan.AdobeLiveCycleUserName");
                 System.out.println("The current Adobe LiveCycle Instance UserName is >" + defaultAdobeUserID);
