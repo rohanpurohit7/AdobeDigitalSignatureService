@@ -119,7 +119,7 @@ public class signDigitalSignature {{
                 defaultAdobePasskey = System.getProperty("com.rohan.AdobeLiveCyclePassword");
                 System.out.println("The current Adobe LiveCycle Instance Password is >" +defaultAdobePasskey);
 
-                connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, defaultAdobeURL);//defaultAdobeURLSIT //http://153.40.33.114:22511
+                connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, defaultAdobeURL);//defaultAdobeURLSIT //http://xxx.xx.yy.zzz:12345
                 connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
                 connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "WebSphere");
                 connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME,defaultAdobeUserID); //defaultAdobeUserID
